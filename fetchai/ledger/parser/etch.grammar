@@ -57,7 +57,7 @@ else_block: "else" instruction+
 
 elseif_block: "elseif" "(" expression ")" instruction+
 
-comment: "//" /.+/
+comment: "//" [/.+/]
 
 use_shard: "[" (use_shard_item ","?)+ "]"
 
@@ -102,7 +102,7 @@ FLOAT_TYPE: "Float" ("64"|"32")
 
 FIXED_TYPE: "Fixed" ("64"|"32")
 
-INLINE_INT: ("u"|"i") INT
+INLINE_INT: ("u"|"i"|"fp") INT
 
 %import common.LETTER
 %import common.WS
