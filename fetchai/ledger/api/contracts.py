@@ -76,7 +76,7 @@ class ContractsApi(ApiEndpoint):
 
     def action(self, contract_address: Address, action: str,
                fee: int, from_address: Address, signers: EntityList,
-               *args, shard_mask: BitVector = None, transfers=transfers):
+               *args, shard_mask: BitVector = None, transfers = None):
         # Default to wildcard shard mask if none supplied
         if not shard_mask:
             logging.warning("Defaulting to wildcard shard mask as none supplied")
